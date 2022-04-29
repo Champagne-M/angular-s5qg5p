@@ -1,0 +1,21 @@
+<h2>  收件人信息 </h2>
+<form [formGroup]="receiverForm" 
+      (ngSubmit)="onSubmit(receiverForm.value)">
+  <label>
+    *姓名:
+    <input type="text" formControlName="name">
+  </label>
+  <label>
+    *地址:
+    <input type="text" formControlName="address">
+  </label>
+  <label>
+    *电话:
+    <input type="text" formControlName="phone">
+  </label>
+
+  <button type="submit" 
+          [disabled]="!receiverForm.valid">
+    保存 
+  </button>
+</form>
