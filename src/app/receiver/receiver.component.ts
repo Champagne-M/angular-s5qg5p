@@ -12,9 +12,9 @@ import { ReceiverService } from '../receiver.service';
 export class ReceiverComponent implements OnInit {
 
   receiverForm = this.fb.group({
-    name: [''],
-    address: [''],
-    phone: ['']
+    name: ['', Validators.required],
+    address: ['', Validators.required],
+    phone: ['', Validators.required]
   });
 
   constructor(
