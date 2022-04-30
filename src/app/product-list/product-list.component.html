@@ -3,7 +3,7 @@
 <div *ngFor="let product of products;">
   <h3>
     <a [title]="product.name + ' 详情'"
-       [routerLink]="[product.url, product.name]">
+       [routerLink]="['/details']">
     {{ product.name }}
     </a>
   </h3>
@@ -19,11 +19,6 @@
   <button (click)="addToCart(product)">
     添加购物车
   </button>
-
-  <app-product-alerts
-    [product]="product"
-    (notify)="onNotify()">
-  </app-product-alerts>
 </div>
 
 <!-- 

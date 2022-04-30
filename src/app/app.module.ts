@@ -7,10 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
 import { ReceiverComponent } from './receiver/receiver.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   imports: [
@@ -19,19 +18,18 @@ import { ReceiverComponent } from './receiver/receiver.component';
     HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      { path: 'products/:productName', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
-      { path: 'receiver', component: ReceiverComponent}
+      { path: 'receiver', component: ReceiverComponent},
+      { path: 'details', component: ProductDetailsComponent}
     ])
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
     ProductListComponent,
-    ProductAlertsComponent,
-    ProductDetailsComponent,
     CartComponent,
-    ReceiverComponent
+    ReceiverComponent,
+    ProductDetailsComponent
   ],
   bootstrap: [ AppComponent ]
 })
