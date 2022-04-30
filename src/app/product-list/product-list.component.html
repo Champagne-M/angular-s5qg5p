@@ -3,7 +3,7 @@
 <div *ngFor="let product of products;">
   <h3>
     <a [title]="product.name + ' 详情'"
-       [routerLink]="['/details']">
+       (click)="jumpTo(product.url)">
     {{ product.name }}
     </a>
   </h3>

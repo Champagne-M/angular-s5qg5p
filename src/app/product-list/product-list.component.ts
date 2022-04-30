@@ -7,22 +7,22 @@ import { CartService } from '../cart.service';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent {
   products = products;
 
-  constructor(
-    private cartService: CartService
-  ){}
+  constructor(private cartService: CartService) {}
 
-  addToCart(product: Product) {
-    window.alert("已添加购物车");
-    this.cartService.addToCart(product);
+  jumpTo(extUrl: string) {
+    window.location.href = extUrl;
   }
 
+  addToCart(product: Product) {
+    window.alert('已添加购物车');
+    this.cartService.addToCart(product);
+  }
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
