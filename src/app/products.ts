@@ -7,23 +7,23 @@ export interface Product {
 
 export const products = [
   {
+    name: 'HUAWEI Mate Xs 2',
+    price: 9999,
+    description: '超轻薄超平整超可靠 | 超清原色大屏 | 原色影像系统',
+    url: ''
+  },
+  {
     name: 'HUAWEI Mate 40 Pro',
-    price: 799,
-    description: '5 nm Kirin 9000 5G SoC | Ultra Vision Cine Camera and Selfie Camera | Dual HUAWEI SuperCharge',
+    price: 7499,
+    description: '麒麟 9000L 芯片，体验震撼 | 超感知徕卡电影影像，硬件实时视频 HDR | HarmonyOS 2，全场景交互体验',
     url: 'https://consumer.huawei.com/en/phones/p40-pro/'
   },
   {
     name: 'HUAWEI P50 Pocket',
-    price: 699,
-    description: 'Premium Foldable Design | Ultra Spectrum Camera | Smart Cover Screen, 6.9" Main Screen',
+    price: 8988,
+    description: '精巧折叠 | 超光谱影像系统 | 智慧外屏，6.9” 可折叠柔性内屏',
     url: 'https://consumer.huawei.com/en/phones/p50-pocket/'
   },
-  {
-    name: 'Phone Standard',
-    price: 299,
-    description: '',
-    url: ''
-  }
 ];
 
 

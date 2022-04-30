@@ -2,18 +2,21 @@
 <form [formGroup]="receiverForm" 
       (ngSubmit)="onSubmit(receiverForm.value)">
   <label>
-    *姓名:
-    <input type="text" formControlName="name">
+    姓名:
+    <input type="text" formControlName="name" required>
   </label>
   <label>
-    *地址:
+    地址:
     <input type="text" formControlName="address">
   </label>
   <label>
-    *电话:
+    电话
     <input type="text" formControlName="phone">
+    <label *ngIf="phoneGetter.invalid && (phoneGetter.dirty)"
+      style="color: red; border: 0px">
+      电话为11位数字
+    </label>
   </label>
-
   <button type="submit" 
           [disabled]="!receiverForm.valid">
     保存 

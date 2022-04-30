@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
-import { products } from '../products';
+import { Product, products } from '../products';
+
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -10,13 +12,15 @@ import { products } from '../products';
 export class ProductListComponent {
   products = products;
 
-  share() {
-    window.alert('The product has been shared!');
+  constructor(
+    private cartService: CartService
+  ){}
+
+  addToCart(product: Product) {
+    window.alert("已添加购物车");
+    this.cartService.addToCart(product);
   }
 
-  onNotify() {
-    window.alert("you will be notified");
-  }
 }
 
 
