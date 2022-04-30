@@ -9,7 +9,6 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CartComponent } from './cart/cart.component';
 import { ReceiverComponent } from './receiver/receiver.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   imports: [
@@ -19,9 +18,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'cart', component: CartComponent },
-      { path: 'receiver', component: ReceiverComponent},
-      { path: 'details', component: ProductDetailsComponent}
-    ])
+      { path: 'receiver', component: ReceiverComponent },
+    ]),
   ],
   declarations: [
     AppComponent,
@@ -29,12 +27,10 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ProductListComponent,
     CartComponent,
     ReceiverComponent,
-    ProductDetailsComponent
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
+export class AppModule {}
 
 /*
 Copyright Google LLC. All Rights Reserved.
