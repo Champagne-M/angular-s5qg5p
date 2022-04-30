@@ -1,23 +1,18 @@
-<h3> 购物清单 </h3>
+<h3>购物清单</h3>
 
-<div class='cart-item' *ngFor="let item of items">
+<div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }}</span>
-  <span>￥{{ item.price}}</span>
+  <span>￥{{ item.price }}</span>
 </div>
 
 <div *ngIf="receiver.name">
-  <p> 收件人信息 </p>
-  <p> {{ receiver.name }} </p>
-  <p> {{ receiver.address }} </p>
-  <p> {{ receiver.phone }} </p>
+  <p>收件人信息</p>
+  <p>{{ receiver.name }}</p>
+  <p>{{ receiver.address }}</p>
+  <p>{{ receiver.phone }}</p>
 </div>
 
-<button routerLink="/receiver"> 添加收货地址 </button>
-<h2> </h2>
-<form [formGroup]="checkoutForm"
-      (ngSubmit)="onSubmit(checkoutForm.value)">
-  <button class="button"
-          type="submit">
-    支付
-  </button>
-</form>
+<button routerLink="/receiver">添加收货地址</button>
+<h2></h2>
+
+<button class="button" (click)="onSubmit()">支付</button>

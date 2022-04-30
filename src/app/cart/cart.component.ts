@@ -28,7 +28,7 @@ export class CartComponent implements OnInit {
     this.receiver = this.receiverService.getReceiver();
   }
 
-  onSubmit(customerData) {
+  onSubmit() {
     this.router.navigate(['/pay']);
   }
 }
