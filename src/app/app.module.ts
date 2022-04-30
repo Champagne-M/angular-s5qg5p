@@ -9,6 +9,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CartComponent } from './cart/cart.component';
 import { ReceiverComponent } from './receiver/receiver.component';
+import { PayComponent } from './pay/pay.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { ReceiverComponent } from './receiver/receiver.component';
       { path: '', component: ProductListComponent },
       { path: 'cart', component: CartComponent },
       { path: 'receiver', component: ReceiverComponent },
+      { path: 'pay', component: PayComponent}
     ]),
   ],
   declarations: [
@@ -27,6 +29,7 @@ import { ReceiverComponent } from './receiver/receiver.component';
     ProductListComponent,
     CartComponent,
     ReceiverComponent,
+    PayComponent
   ],
   bootstrap: [AppComponent],
 })

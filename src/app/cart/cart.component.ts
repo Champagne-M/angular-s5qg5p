@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { Product } from '../products';
 import { Receiver } from '../receiver';
@@ -10,23 +11,17 @@ import { ReceiverService } from '../receiver.service';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
   receiver: Receiver;
   items: Product[];
-  checkoutForm;
 
   constructor(
+    private router: Router,
     private cartService: CartService,
-    private receiverService: ReceiverService,
-    private formBuilder: FormBuilder
-  ) { 
-    this.checkoutForm = this.formBuilder.group({
-      name: " ",
-      address: " "
-    });
-  }
+    private receiverService: ReceiverService
+  ) {}
 
   ngOnInit() {
     this.items = this.cartService.getItems();
@@ -34,11 +29,6 @@ export class CartComponent implements OnInit {
   }
 
   onSubmit(customerData) {
-    console.warn("your oder has been submitted", customerData);
-
-    this.items = this.cartService.clearCart();
-    this.checkoutForm.reset();
-    console.log("what the fuck?");
+    this.router.navigate(['/pay']);
   }
-
 }
